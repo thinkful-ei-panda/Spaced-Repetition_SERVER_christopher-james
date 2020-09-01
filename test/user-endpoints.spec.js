@@ -172,19 +172,22 @@ describe('User Endpoints', function () {
           name: 'test name',
         }
         const expectedList = {
-          name: 'French',
+          name: 'Spanish',
           total_score: 0,
           words: [
-            { original: 'entraine toi', translation: 'practice' },
-            { original: 'bonjour', translation: 'hello' },
-            { original: 'maison', translation: 'house' },
-            { original: 'développeur', translation: 'developer' },
-            { original: 'traduire', translation: 'translate' },
-            { original: 'incroyable', translation: 'amazing' },
-            { original: 'chien', translation: 'dog' },
-            { original: 'chat', translation: 'cat' },
+            { original: 'adiós', translation: 'goodbye' },
+            { original: 'hola', translation: 'hello' },
+            { original: 'casa', translation: 'house' },
+            { original: 'tío', translation: 'uncle' },
+            { original: 'padre', translation: 'father' },
+            { original: 'madre', translation: 'mother' },
+            { original: 'perro', translation: 'dog' },
+            { original: 'gato', translation: 'cat' },
+            { original: 'coche', translation: 'car' },
+            { original: 'bicicleta', translation: 'bicycle' },
           ]
         }
+
         return supertest(app)
           .post('/api/user')
           .send(newUser)
